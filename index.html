@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>批次郵遞區號小常識</title>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.0/vue.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="myStyle.css" type="text/css">
+
 </head>
 <body>
+<div class="jumbotron">
+    <h1 class="display-3">弱弱批次五碼郵遞區號小工具</h1>
+    <p class="lead">弱弱的批次五碼郵遞區號小工具，感謝http://zip5.5432.tw/這網站的大大，超好用但可惜不能批次，所以就寫了弱弱的小工具，如果有更好的批次轉郵遞區號網站麻煩跟我說，我再把這網站刪掉。</p>
+    <hr class="my-4">
+    <p>注意事項：大量使用會被ban，可以30個30個分批丟進去。</p>
+</div>
+    <div class="container">
 
+        <div class="row">
+            <textarea type='text' id="a_id" class="col-md-3" ></textarea>
+            <textarea type="text" id="target1" class="col-md-9" placeholder="結果以,分隔"></textarea>
+        </div>
+        <div class="row">        </div>
+        <p></p>
+
+        <div class="row">
+            <br>
+            <button class="col-md-1" type='button' onclick='get_zip5_adrs("a_id")' >查詢</button>
+            <button class="col-md-1" type='button' onclick='refresh()' >清空</button>
+            <button class="col-md-3" type='button' onclick='total()' >你這次查詢的筆數</button>
+            <p>查詢筆數共</p><p id="count"></p><p>筆</p>
+
+        </div>
+    </div>
 </body>
+
+<script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script type="text/javascript" src="myjs.js"></script>
+
 </html>
