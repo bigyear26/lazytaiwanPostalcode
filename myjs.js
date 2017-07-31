@@ -7,22 +7,32 @@ function get_zip5_adrs(a_id) {
     var words=word.split("\n");
     var wordsLength=words.length-1;
 
-    for (i = 0; i <= wordsLength; i++) {
-        var zip5_url = "https://zip5.5432.tw/zip5json.py?adrs=" + words[i] + "&jsoncallback=?"
-            $.getJSON(zip5_url,
-                function (data) {
-                    $("#target1").append(data.new_adrs+","+data.adrs + "\n");
-                }
-
-            );
-        }
+    for (var i = 0; i <= wordsLength; i++) {
+        (function(i) { // protects i in an immediately called function
+            $.getJSON("https://zip5.5432.tw/zip5json.py?adrs=" + words[i] + "&jsoncallback=?",
+                function (data){
+                    function run() {
+                        $("#target1").append(data.new_adrs+","+data.adrs + "\n");
+                    };
+                setTimeout(run,3000*i);
+                });
+        })(i);
     }
+
+
+}
 
 function refresh() {
     window.location.reload();
 }
-    //刷新当前页面.
 function total() {
     $("#count").text($("#a_id").val().split("\n").length)
 }
 
+
+function gao() {
+    var word=$("#a_id").val();
+    var words=word.split("\n");
+    var wordsLength=words.length-1;
+    alert(words[1])
+}
