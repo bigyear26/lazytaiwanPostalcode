@@ -12,7 +12,6 @@ function get_zip5_adrs(a_id) {
             $.getJSON(zip5_url,
                 function (data) {
                     $("#target1").append(data.new_adrs+","+data.adrs + "\n");
-                    setTimeout("gogo(data)",100000)
                 }
 
             );
