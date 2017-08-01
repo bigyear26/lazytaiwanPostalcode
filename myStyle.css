@@ -3,7 +3,8 @@ textarea {
   color: #8a9ed8; }
 
 button {
-  margin-right: 20px; }
+  margin-right: 20px;
+  margin-bottom: 20px; }
 
 #count {
   font-size: large; }

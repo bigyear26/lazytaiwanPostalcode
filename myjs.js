@@ -11,15 +11,18 @@ function total() {
 
 
 function gao() {
-    var word=$("#a_id").val();
-    var words=word.split("\n");
-    var wordsLength=words.length-1;
-    alert(words[1])
+    // var word=$("#a_id").val();
+    // var words=word.split("\n");
+    // var wordsLength=words.length-1;
+    // alert(words[1]);
+    // var secc=$("#secc").val();
+    // alert(secc)
 }
 
 
 function get_zip5_adrs(a_id) {
 
+    var secc=$("#secc").val();
     var word=$("#a_id").val();
     var words=word.split("\n");
     var wordsLength=words.length-1;
@@ -30,7 +33,7 @@ function get_zip5_adrs(a_id) {
                     function run() {
                         $("#target1").append(data.new_adrs+","+data.adrs + "\n");
                     };
-                    setTimeout(run,1500*i);
+                    setTimeout(run,1000+secc*1000*i);
                 });
         })(i);
     }

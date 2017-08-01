@@ -26,13 +26,13 @@
     <h1 class="display-3">弱弱der批次五碼郵遞區號小工具</h1>
     <p class="lead">弱弱的批次五碼郵遞區號小工具，感謝http://zip5.5432.tw/這網站的大大，超好用但可惜不能批次，所以就寫了弱弱的小工具</p>
     <hr class="my-4">
-    <p>注意事項：大量使用會被ban，可以30個30個分批丟進去。</p>
+    <p>注意事項：大量使用會被ban，已設定每間隔1.5秒輸出一筆資料。</p>
 </div>
     <div class="container">
 
         <div class="row">
-            <textarea type='text' id="a_id" class="col-md-3" ></textarea>
-            <textarea type="text" id="target1" class="col-md-9" placeholder="結果以,分隔"></textarea>
+            <textarea type='text' id="a_id" class="col-md-3" placeholder="輸入地址，請以空行分隔" ></textarea>
+            <textarea type="text" id="target1" class="col-md-9" placeholder="輸入的地址,3+2郵遞區號加調整後的地址"></textarea>
         </div>
         <div class="row">        </div>
         <p></p>
@@ -42,7 +42,8 @@
             <button type="button" class="btn btn-success" onclick='get_zip5_adrs("a_id")' >查詢</button>
             <button type="button" class="btn btn-success" onclick='refresh()' >清空</button>
             <button type="button" class="btn btn-warning" onclick='total()' >你這次查詢的筆數共 <span id="count" ></span> 筆</button>
-            <button type="button" class="btn btn-success" onclick='gao()' >測試功能鈕</button>
+            <button type="button" class="btn btn-success" onclick='gao()' >測試功能鈕(沒什麼用)</button>
+            <input type="text" id="secc" placeholder="查詢間隔的秒數">
 
             <!--<button class="col-md-1" type='button' onclick='get_zip5_adrs("a_id")' >查詢</button>-->
             <!--<button class="col-md-1" type='button' onclick='refresh()' >清空</button>-->
