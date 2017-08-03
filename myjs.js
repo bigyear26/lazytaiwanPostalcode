@@ -33,7 +33,7 @@ function get_zip5_adrs(a_id) {
                     function run() {
                         $("#target1").append(data.new_adrs+","+data.adrs + "\n");
                     };
-                    setTimeout(run,1000+secc*1000*i);
+                    setTimeout(run,1000+secc*1500*i);
                 });
         })(i);
     }
