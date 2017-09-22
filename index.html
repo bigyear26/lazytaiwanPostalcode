@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>弱弱der批次五碼郵遞區號小工具 維修中！</title>
+    <title>弱弱der批次五碼郵遞區號小工具v1.01</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="myStyle.css" type="text/css">
 
@@ -26,7 +26,8 @@
     <h1 class="display-3">弱弱der批次五碼郵遞區號小工具</h1>
     <p class="lead">弱弱的批次五碼郵遞區號小工具，感謝http://zip5.5432.tw/這網站的大大，超好用，但可惜我需要能批次，所以就寫了弱弱的小工具</p>
     <hr class="my-4">
-    <p>注意事項：大量使用會被ban，已設定每間隔1.5秒輸出一筆資料。</p>
+    <p>下方框框可輸入間隔秒數，為什麼要間隔秒數，
+        注意事項：大量使用會被ban，已設定每間隔1秒輸出一筆資料，為求安全可在下框輸入添加更多間隔秒數，以策安全。</p>
     <input type="text" id="secc" placeholder="自訂間隔的秒數">
 
 </div>
@@ -41,10 +42,15 @@
 
     <div class="row">
         <br>
-        <button type="button" class="btn btn-success" onclick='get_zip5_adrs("a_id")' >查詢</button>
+        <button type="button" class="btn btn-success" onclick='clr(),get_zip5_adrs("a_id"),count()'>查詢3+2加校正地址</button>
+        <button type="button" class="btn btn-success" onclick='clr(),get_zip5_adrsSplit("a_id"),count()'>查詢3+2號碼+逗號+校正地址</button>
+        <button type="button" class="btn btn-success" onclick='clr(),get_zip5_adrs01("a_id"),count()'>查詢3+2號碼</button>
+        <button type="button" class="btn btn-success" onclick='clr(),get_zip5_adrsSplitAd("a_id"),count()'>查詢校正地址</button>
+        <p>你這次查詢的筆數共 <span id="count" ></span>筆</p>
+
         <button type="button" class="btn btn-success" onclick='refresh()' >清空</button>
-        <button type="button" class="btn btn-warning" onclick='total()' >你這次查詢的筆數共 <span id="count" ></span> 筆</button>
-        <button type="button" class="btn btn-success" onclick='gao()' >測試功能鈕(沒什麼用)</button>
+        <!--<button type="button" class="btn btn-warning" onclick='total()' >你這次查詢的筆數共 <span id="count" ></span>-->
+        <!--<button type="button" class="btn btn-success" onclick='gao()' >測試功能鈕(沒什麼用)</button>-->
 
         <!--<button class="col-md-1" type='button' onclick='get_zip5_adrs("a_id")' >查詢</button>-->
         <!--<button class="col-md-1" type='button' onclick='refresh()' >清空</button>-->
