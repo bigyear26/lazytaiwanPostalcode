@@ -98,7 +98,7 @@ function get_zip5_adrsSplitAd(a_id) {
                 function (data){
                     function run() {
                         var str=data.new_adrs.slice(5);
-                        $("#target1").append(data.adrs+","+str+ "\n");
+                        $("#target1").append(str+ "\n");
                     };
                     setTimeout(run,1000+secc*1500*i);
                 });
