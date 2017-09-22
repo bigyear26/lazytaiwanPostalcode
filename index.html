@@ -28,6 +28,7 @@
     <hr class="my-4">
     <p>下方框框可輸入間隔秒數，為什麼要間隔秒數，
         注意事項：大量使用會被ban，已設定每間隔1秒輸出一筆資料，為求安全可在下框輸入添加更多間隔秒數，以策安全。</p>
+    <p><b>你這次查詢的筆數共 <span id="count" ></span>筆</b></p>
     <input type="text" id="secc" placeholder="自訂間隔的秒數">
 
 </div>
@@ -46,7 +47,7 @@
         <button type="button" class="btn btn-success" onclick='clr(),get_zip5_adrsSplit("a_id"),count()'>查詢3+2號碼+逗號+校正地址</button>
         <button type="button" class="btn btn-success" onclick='clr(),get_zip5_adrs01("a_id"),count()'>查詢3+2號碼</button>
         <button type="button" class="btn btn-success" onclick='clr(),get_zip5_adrsSplitAd("a_id"),count()'>查詢校正地址</button>
-        <p>你這次查詢的筆數共 <span id="count" ></span>筆</p>
+
 
         <button type="button" class="btn btn-success" onclick='refresh()' >清空</button>
         <!--<button type="button" class="btn btn-warning" onclick='total()' >你這次查詢的筆數共 <span id="count" ></span>-->
