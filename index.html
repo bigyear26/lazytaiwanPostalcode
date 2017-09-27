@@ -30,17 +30,28 @@
 <!-- End Google Tag Manager (noscript) -->
 
 <div class="jumbotron">
-    <h1 class="display-3">弱弱der批次五碼郵遞區號小工具</h1>
-    <p class="lead">弱弱的批次五碼郵遞區號小工具，感謝http://zip5.5432.tw/這網站的大大，超好用，但可惜我需要能批次，所以就寫了弱弱的小工具</p>
+    <h1 class="display-3">不起眼弱弱der地址小工具</h1>
+    <p class="lead">
+        本頁面包含兩個弱弱的批次五碼郵遞區號小工具，<br>
+        1.首先要感謝http://zip5.5432.tw/這網站的大大，超好用，但因為常有批次轉post code的需求，所以使用這網站的api做了小工具。<br>
+        2.再來要感謝<a href="http://uhooamber.com/">李小淮前輩</a> ，故參考他的程式碼，作出分開經緯度的轉換工具使用，真的非常謝謝他！<br>
+    </p>
     <hr class="my-4">
-    <p>下方框框可輸入間隔秒數，為什麼要間隔秒數，
-        注意事項：大量使用會被ban，已設定每間隔1秒輸出一筆資料，為求安全可在下框輸入添加更多間隔秒數，以策安全。</p>
+    <p>下方框框可輸入間隔秒數，為什麼要間隔秒數，因為 .....
+        1.<b>大量使用會被ban</b>，已設定每間隔1秒輸出一筆資料，為求安全可在下框輸入添加更多間隔秒數，以策安全。<br>
+        2.因為是不同步輸出，所以可能有不按照順序輸出答案的情況發生，填入秒數可以稍稍讓他按順序輸出，<br>
+    </p>
     <p><b>你這次查詢的筆數共 <span id="count" ></span>筆</b></p>
+    <p></p>
     <input type="text" id="secc" placeholder="自訂間隔的秒數">
 
 </div>
 <div class="container">
-
+    <div class="row">
+        <p class="col-md-12">
+            <h5>寫在前面</h5>
+        </p>
+    </div>
     <div class="row">
         <textarea type='text' id="a_id" class="col-md-3" placeholder="輸入地址，請以空行分隔" ></textarea>
         <textarea type="text" id="target1" class="col-md-9" placeholder="輸入的地址,3+2郵遞區號加調整後的地址"></textarea>
@@ -72,10 +83,9 @@
 <!--第二功能-->
 
 
-    <div>
-        <h2>輸入地址批次轉換經緯度的小工具二代</h2>
-        <h4>哈利之不負責任工具學堂，經緯度分開喲！</h4>
-        <hr/>
+    <div class="jumbotron">
+        <h3 class="display-4">輸入地址批次分開轉換經緯度的小工具</h3>
+        <p class="lead">主要是讓經緯度分開啦</p>
     </div>
 
     <div class="row">
@@ -111,7 +121,7 @@
     <div>
         <hr/>
         <h5>
-            本工具由 <a href="http://uhooamber.com/">李小淮前輩</a> 開發，因為臨時需要單獨的轉換，故參考他的程式碼作出單獨分開的轉換工具使用一下，真的非常謝謝他！
+
         </h5>
     </div>
 

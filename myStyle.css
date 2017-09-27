@@ -42,3 +42,7 @@ textarea {
 #a1:checked ~ label {
   background-color: #B0095C;
 }
+
+#belt {
+  background-color: blanchedalmond;
+}
